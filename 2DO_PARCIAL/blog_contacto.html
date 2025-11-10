@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Blog de Series</title>
+  <link rel="stylesheet" href="./CSS/style_contacto.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="seccion_titulo"> 
+    <h1 class="nombre_principal"><i>"Blog de Series"</i></h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="./blog.html">Inicio</a></li>
+        <li><a href="./blog_sobremi.html">Sobre el Blog</a></li>
+        <li><a href="./publicaciones_blog.html">Publicaciones</a></li>        
+        <li><a href="./blog_contacto.html">Contacto</a></li> 
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section class="estructura_formulario">
+    <h2>Formulario de Contacto</h2>
+    <form action="#" method="post">
+      <!--SECCION PONER NOMBRE-->
+      <label>Nombre:</label> <!--LO QUE SE VE-->
+      <input type="text" name="nombre" placeholder="Escribí tu nombre"> <!--RELLENO-->
+      <!--SECCION PONER EDAD-->
+      <label>Edad:</label> <!--LO QUE SE VE-->
+      <input type="number" name="edad" placeholder="Tu edad"><!--RELLENO-->
+      <!--SECCION PONER OPINION-->
+      <label>¿Qué opinás del blog?</label> <!--LO QUE SE VE-->
+      <textarea name="opinion" placeholder="Tu opinión..."></textarea><!--RELLENO-->
+      <!--SECCION PONER COMENTARIO-->
+      <label>¿Querés dejar un comentario, sobre mi Blog?</label> <!--LO QUE SE VE-->
+      <textarea name="comentario" placeholder="Tu comentario..."></textarea><!--RELLENO-->
+      <!--SECCION MI PREGUNTA-->
+      <label>¿Cuál es tu serie o película favorita?</label><!--LO QUE SE VE-->
+      <input type="text" name="favorita" placeholder="Escribí tu favorita"><!--RELLENO-->
+<!--BOTON DE ENVIAR-->
+      <button type="submit" class="boton_enviar">Enviar</button>
+    </form>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="columna_style" id="estilo_nav">
+      <h2>Nataly Cumba</h2>
+    </div>
+
+    <div class="columna_style">
+      <h2>Mapa de Sitio</h2>
+      <ul>
+        <li class="sin_punto"><a href="./blog.html">Inicio</a></li>
+        <li class="sin_punto"><a href="./blog_sobremi.html">Sobre el Blog</a></li>
+        <li class="sin_punto"><a href="./publicaciones_blog.html">Publicaciones</a></li>
+        <li class="sin_punto"><a href="./blog_contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="columna_style">
+      <h2>Redes sociales</h2>
+      <table>
+        <tr><th>Facebook</th><th><a href="https://www.facebook.com/"><img src="./IMAGENES/facebooknav.png" width="30"></a></th></tr>
+        <tr><th>WhatsApp</th><th><a href="https://web.whatsapp.com/"><img src="./IMAGENES/whassap.png" width="30"></a></th></tr>
+        <tr><th>Instagram</th><th><a href="https://www.instagram.com/"><img src="./IMAGENES/instagramnav.png" width="30"></a></th></tr>
+        <tr><th>LinkedIn</th><th><a href="https://ar.linkedin.com/"><img src="./IMAGENES/linkedin.png" width="30"></a></th></tr>
+      </table>
+      <a href="#" class="volver-arriba">Volver arriba</a>
+    </div>
+  </footer>
+
+</body>
+</html>

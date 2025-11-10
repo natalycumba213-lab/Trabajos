@@ -1,0 +1,267 @@
+/*  GENERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: #fff;
+}
+
+/* TITULO ENCABEZADO*/
+.nombre_principal{
+    font-size: 2em;
+    color: #c8a2ff;
+}
+
+/* ENCABEZADO +MENU */
+.seccion_titulo {
+    text-align: center;
+    padding: 20px;
+    background: #f5f0ff;
+    border-bottom: 2px solid #c8a2ff;
+}
+
+        /*QUE LA LISTA SEA HORIZONTAL*/
+        .nav ul { 
+            list-style: none;
+            margin-top: 10px;
+        }
+        /* QUE LOS ELEMENTOS DE LA LISTA ESTEN EN LINEA */
+        .nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        /*QUITAR SUBRAYADO Y DAR COLOR A LOS ENLACES DEL MENU*/
+        .nav a {
+            text-decoration: none;
+            color: #4b0082;
+            font-weight: bold;
+        }
+
+/* TEXTO DE ENCABEZADO, ASPECTO */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background: #faf5ff;
+    border-radius: 12px;
+}
+
+/* ESTETICA LA SECCION MAIN + ASIDE */
+.contenido-principal {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto; /*Alinea el contenido al centro=auto*/
+    padding: 0 20px;
+}
+
+/* ESTETICA DE MI MAIN*/
+main.articulos {/*EN MAIN SECCION, EL CLASS BLOG*/
+    flex: 3;/*RESPECTO AL ESPACIO QUE OCUPA MAIN QUE ES 3 VECES MAS QUE ASIDE*/
+    display: grid;
+    gap: 20px;
+}
+
+/*ESTETICA DE LOS ARTICULOS*/
+    .estetica_articulo {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        overflow: hidden;/*ESCONDER LO QUE SOBRESALE*/
+
+    }
+    /*MOV DE LA CARTA DE CADA ARTICULO*/
+    .estetica_articulo:hover {
+        transform: scale(1.02);
+    }
+
+    /*ESTETICA DE LA IMAGEN*/
+    .estetica_articulo img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;/*IMAGEN CUBRA TODO EL CONTENEDOR*/
+    }
+    /*espacido de aca articulo*/
+    .cada_articulo {
+        padding: 20px;
+    }
+    /*ESTETICA TEXTO DE CADA ARTICULO*/
+    .cada_articulo h3 {
+        margin-top: 0;
+        color: #e6ccff;
+        margin-bottom: 10px;
+    }
+    /*QUITAR EL SUBYRAYADO Y DAR COLOR A LOS ENLACES DE CADA ARTICULO*/
+    .cada_articulo a {
+        text-decoration: none;
+        color: #c8a2ff;
+        font-weight: bold;/*LETRA EN NEGRITA*/
+    }
+
+    .cada_articulo p {
+    margin-bottom: 15px;
+    }
+
+/*ASIDE*/    
+/* SECCION SOBRE MI, ESTETICA */
+    aside.sobre_mi {
+        flex: 1;/*ocupa un espacio*/
+        background: #e6ccff;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .foto_perfil {
+        width: 100%;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+/* FOOTER */
+    footer.footer {
+        margin-top: 40px;
+        padding: 30px 20px;
+        background-color: #c8a2ff;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .columna_style {
+        display:inline-block;
+        width: 30vh;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+
+    .sin_punto {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .columna_style a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .volver-arriba {
+        display: block;
+        margin-top: 15px;
+        color: #4b0082;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.suscribite
+{
+    margin-top: 20%; /*espacio entre los 2 div*/
+    background-color: #f3e9f8;
+    text-align: center;
+    padding: 40px 20px;/*espacio interno*/
+    border-top: 2px solid #7b3fa1; /*borde superior*/
+}
+.suscribite h2 {
+    color: #7b3fa1;
+    margin-bottom: 10px;
+}
+
+.suscribite p {
+  color: #555;
+  margin-bottom: 20px;
+}
+/*estetita la seccion del formulario*/
+.formulario_suscripcion{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/*estetica de donde escribe el email*/
+.formulario_suscripcion input {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+/*boton de suscripcion. ESTETICA*/
+.formulario_suscripcion button {
+  background-color: #7b3fa1;
+  color: white; /*LETRA*/
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+/*mov de boton suscripcion*/
+.formulario_suscripcion button:hover {
+  background-color: #5f2f7d;
+  transform: scale(1.05);
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 768px) {
+
+/*MENU DE ARRIBA*/
+  .nav ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 8px;   }
+
+  .nav a {
+    font-size: 0.95em;}
+
+/*MAIN + ASIDE*/
+
+  .contenido-principal {
+    flex-direction: column; 
+    align-items: center;  }
+
+  main.articulos {
+    width: 95%;  }
+
+  aside.sobre_mi {
+    width: 90%; 
+    margin-top: 20px;  }
+
+/*ARTICULOS*/
+
+  .estetica_articulo img {
+    height: 180px; 
+  }
+  .cada_articulo {
+    padding: 15px;
+  }
+
+/*SUSCRIBITE*/
+  .formulario_suscripcion {
+    flex-direction: column; 
+    align-items: center;   
+    gap: 10px;      }
+
+/*MENU DE ABAJO*/
+
+  footer.footer {
+    flex-direction: column; 
+    align-items: center;  
+    text-align: center;  
+    gap: 25px;              }
+
+  .columna_style {
+    width: 100%;  }
+
+    .columna_style table {
+    margin: 0 auto;
+  }
+  }

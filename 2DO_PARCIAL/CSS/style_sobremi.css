@@ -1,0 +1,179 @@
+/*  GENERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: #fff;
+}
+
+/* TITULO ENCABEZADO*/
+.nombre_principal{
+    font-size: 2em;
+    color: #c8a2ff;
+}
+
+/* ENCABEZADO +MENU */
+.seccion_titulo {
+    text-align: center;
+    padding: 20px;
+    background: #f5f0ff;
+    border-bottom: 2px solid #c8a2ff;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+
+        /*QUE LA LISTA SEA HORIZONTAL*/
+        .nav ul { 
+            list-style: none;
+            margin-top: 10px;
+        }
+        /* QUE LOS ELEMENTOS DE LA LISTA ESTEN EN LINEA */
+        .nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        /*QUITAR SUBRAYADO Y DAR COLOR A LOS ENLACES DEL MENU*/
+        .nav a {
+            text-decoration: none;
+            color: #4b0082;
+            font-weight: bold;
+        }
+
+/* CONTENIDO PRINCIPAL */
+
+/*ESTETICA DEL CUADRO PIRNCIPAL SOBRE MI*/
+.estructura_sobremi {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #faf5ff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+/*TITULO*/
+.estructura_sobremi h2 {
+  text-align: center;
+  color: #7b3fa1;
+  margin-bottom: 20px;
+}
+/*LETRA DEL TEXTO*/
+.estructura_sobremi p {
+  margin-bottom: 20px;
+  line-height: 1.6;/*ESPACIO ENTRE LINEAS*/
+  font-size: 1.05em;/*TAMAÑO DE LETRA*/
+  text-align: justify;
+}
+
+/* SECCIÓN DE DATOS */
+.seccion_datos {
+  background: #f1e7ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.seccion_datos h3 {
+  color: #4b0082;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seccion_datos ul {
+  list-style: none;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* FOOTER */
+    footer.footer {
+        margin-top: 40px;
+        padding: 30px 20px;
+        background-color: #c8a2ff;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .columna_style {
+        display:inline-block;
+        width: 30vh;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+
+    .sin_punto {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .columna_style a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .volver-arriba {
+        display: block;
+        margin-top: 15px;
+        color: #4b0082;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+/*MENU DE ARRIBA*/
+  .nav ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 8px;   }
+
+  .nav a {
+    font-size: 0.95em;}
+/*SOBRE MI*/
+  .estructura_sobremi {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;  }
+
+  .nombre_principal {
+    font-size: 1.5em;  }
+  
+    .estructura_sobremi p {
+    font-size: 1em; 
+    text-align: left; 
+  }
+  .seccion_datos {
+    padding: 15px;
+    margin-top: 20px;  }
+
+  .seccion_datos ul {
+    font-size: 0.95em;
+    line-height: 1.6;}
+  
+/*FOOTER*/
+  footer.footer {
+    flex-direction: column; 
+    align-items: center;  
+    text-align: center;  
+    gap: 25px;              }
+
+  .columna_style {
+    width: 100%;  }
+
+    .columna_style table {
+    margin: 0 auto;
+  }  
+}

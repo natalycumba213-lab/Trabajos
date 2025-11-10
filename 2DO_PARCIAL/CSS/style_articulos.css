@@ -1,0 +1,274 @@
+/*  GENERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: #fff;
+}
+
+/* TITULO ENCABEZADO*/
+.nombre_principal{
+    font-size: 2em;
+    color: #c8a2ff;
+}
+
+/* ENCABEZADO +MENU */
+.seccion_titulo {
+    text-align: center;
+    padding: 20px;
+    background: #f5f0ff;
+    border-bottom: 2px solid #c8a2ff;
+}
+
+        /*QUE LA LISTA SEA HORIZONTAL*/
+        .nav ul { 
+            list-style: none;
+            margin-top: 10px;
+        }
+        /* QUE LOS ELEMENTOS DE LA LISTA ESTEN EN LINEA */
+        .nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        /*QUITAR SUBRAYADO Y DAR COLOR A LOS ENLACES DEL MENU*/
+        .nav a {
+            text-decoration: none;
+            color: #4b0082;
+            font-weight: bold;
+        }
+/*lo anterior es igual en todas las paginas*/
+
+
+/* --- CSS DE ARTICULOS --- */
+.intro_serie {
+  text-align: center;
+  padding: 40px;
+  background: #faf5ff;
+  border-bottom: 2px solid #c8a2ff;
+}
+
+.intro_serie h2 {
+  color: #4b0082;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.intro_serie p {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.intro_imagen {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* CONTENIDO DE LOS ARTICULOS */
+.contenido_articulo{
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/*ESTETICA DE CADA BLOQUE DEL ARTICULO*/
+    .estetica_bloque {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .estetica_bloque h3 {
+    color: #4b0082;
+    margin-bottom: 15px;
+    }
+
+    .estetica_bloque p{
+    line-height: 1.6;
+    color: #333;
+    } 
+    
+
+    .estetica_bloque ul{
+    line-height: 1.6;
+    color: #333;
+    }
+
+    .estetica_bloque ul {
+    list-style: disc;
+    margin-left: 25px;
+    }
+
+/* GALERIA DE IMAGENES, estetica. bloque 1*/
+    .imagenes_articulo {
+    display: flex;/*uno de cada lado*/
+    gap: 15px;/*espacio entre imagenes*/
+    margin-top: 15px;
+    }
+    /*estetica de cada imagen de la galeria*/
+    .imagenes_articulo img {
+    width: 33%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 180px;
+    }
+
+/*ESTETICA IMAGEN BLOQUE 2*/
+.imagen_bloque_2 {
+  display: block;
+  height: 350px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* VIDEO */
+
+/*ESTETICA VIDEO*/
+    .contenedor_video{
+    text-align: center;
+    margin-top: 15px;
+    }
+
+    .contenedor_video iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      border-radius: 12px;
+    }
+
+/* NAVEGACIÓN ENTRE ARTÍCULOS */
+    .navegacion_articulos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: #f5f0ff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    /*estetica de boton*/
+    .navegacion_articulos a {
+    text-decoration: none;
+    color: #4b0082;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.2s;
+    }
+    /*resaltado de boton*/
+    .navegacion_articulos a:hover {
+    color: #c8a2ff;
+    transform: scale(1.05);
+    }
+
+/* FOOTER. DE TODAS LAS PAGUINAS ES IGUAL */
+    footer.footer {
+        margin-top: 40px;
+        padding: 30px 20px;
+        background-color: #c8a2ff;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .columna_style {
+        display:inline-block;
+        width: 30vh;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+
+    .sin_punto {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .columna_style a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .volver-arriba {
+        display: block;
+        margin-top: 15px;
+        color: #4b0082;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+@media (max-width: 768px){
+/*MENU DE ARRIBA*/
+  .nav ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 8px;   }
+
+  .nav a {
+    font-size: 0.95em;}
+/*SERIE*/
+  .contenido_articulo {
+    padding: 0 10px;  }
+
+  .imagenes_articulo {
+    flex-direction: column;  }
+
+  .imagenes_articulo img {
+    width: 100%;
+    height: auto}
+  
+  .intro_imagen {
+    max-width: 100%; 
+    height: auto;  }
+
+
+/*IMAGEN 2*/
+  .imagen_bloque_2 {
+    height: auto;}
+
+/*VIDEO*/
+.contenedor_video iframe {
+    width: 100%;
+    height: 250px; } 
+
+/*NAVEGACION DE ARTICULOS*/
+.navegacion_articulos {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }    
+/*FOOTER*/
+ footer.footer {
+    flex-direction: column; 
+    align-items: center;  
+    text-align: center;  
+    gap: 25px;              }
+
+  .columna_style {
+    width: 100%;  }
+
+    .columna_style table {
+    margin: 0 auto;  } 
+  
+  }

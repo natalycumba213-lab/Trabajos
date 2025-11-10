@@ -1,0 +1,214 @@
+/*  GENERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: #fff;
+}
+
+
+/* TITULO ENCABEZADO*/
+.nombre_principal{
+    font-size: 2em;
+    color: #c8a2ff;
+}
+
+/* ENCABEZADO +MENU */
+.seccion_titulo {
+    text-align: center;
+    padding: 20px;
+    background: #f5f0ff;
+    border-bottom: 2px solid #c8a2ff;
+}
+
+        /*QUE LA LISTA SEA HORIZONTAL*/
+        .nav ul { 
+            list-style: none;
+            margin-top: 10px;
+        }
+        /* QUE LOS ELEMENTOS DE LA LISTA ESTEN EN LINEA */
+        .nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        /*QUITAR SUBRAYADO Y DAR COLOR A LOS ENLACES DEL MENU*/
+        .nav a {
+            text-decoration: none;
+            color: #4b0082;
+            font-weight: bold;
+        }
+
+
+/*ESTETICA DEL TEXTO DE INTRO*/
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+  background: #faf5ff;
+  border-radius: 12px;
+  margin: 20px auto;/*ESPACIO ENTRE MENU DE ARRIBA Y TEXTO*/
+  max-width: 1100px;
+}
+
+/* ARTICULOS ESTETICA DEL BLOQUE*/
+.centrado_articulos {
+  display: grid;/*QUE SE ACOMODE AUTOMATICAMNETE LAS TARJETAS SEGUN EL TAMAÑO DE PANTALLA*/
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  /*TRAJETAS SE ADAPTAN A LA PANTALLA,280PX MINIMO Y 1FR MAXIMO [UNA FRACCION IGUAL DES ESPACIO DELC ONTENEDOR*/
+  gap:3%; /*ESPACIO ENTRE LAS TARJETAS*/
+  max-width: 1100px; /*ANCHO MAXIMO DEL CONTENEDOR DE LAS TARJETAS*/
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ESTETICA DE CADA ARTICULO */
+.estetica_articulo {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/*MOV DE LA CARTA DE CADA ARTICULO*/
+.estetica_articulo:hover {
+  transform: scale(1.02);
+}
+
+/*ESTETICA DE LA IMAGEN*/
+.estetica_articulo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;/*IMAGEN CUBRA TODO EL CONTENEDOR*/
+}
+
+/*espacido de aca articulo*/
+.cada_articulo {
+  padding: 25px;
+}
+
+ /*ESTETICA TEXTO DE CADA ARTICULO*/
+.cada_articulo h3 {
+  color: #c8a2ff;
+  margin-bottom: 7px;
+}
+
+.cada_articulo p {
+  margin-bottom: 7px;
+}
+
+/*QUITAR EL SUBYRAYADO Y DAR COLOR A LOS ENLACES DE CADA ARTICULO*/
+.cada_articulo a {
+  text-decoration: none;
+  color: #7b3fa1;
+  font-weight: bold;/*LETRA EN NEGRITA*/
+}
+
+/* FOOTER */
+    footer.footer {
+        margin-top: 40px;
+        padding: 30px 20px;
+        background-color: #c8a2ff;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .columna_style {
+        display:inline-block;
+        width: 30vh;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+
+    .sin_punto {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .columna_style a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .volver-arriba {
+        display: block;
+        margin-top: 15px;
+        color: #4b0082;
+        text-decoration: none;
+        font-weight: bold;
+    }
+/*PAGINATION*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none; /* remove list bullets */
+  padding: 0px;
+}
+
+.pagination li a {
+  display: block; /* let links fill the list item */
+  padding: 8px 12px;
+  text-decoration: none;
+  border: 1px solid gray;
+  color: black;  
+  margin: 0 4px;
+  border-radius: 5px; /* add rounded borders */
+}
+
+@media (max-width: 768px){
+/*MENU DE ARRIBA*/
+  .nav ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 8px;   }
+
+  .nav a {
+    font-size: 0.95em;}
+/*ARTICULOS*/
+ .centrado_articulos {
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    padding: 0 10px;  }
+
+  .estetica_articulo img {
+    height: 180px;   }
+
+  .cada_articulo {
+    padding: 15px;  }
+
+    /*FOOTER*/
+ footer.footer {
+    flex-direction: column; 
+    align-items: center;  
+    text-align: center;  
+    gap: 25px;              }
+
+  .columna_style {
+    width: 100%;  }
+
+    .columna_style table {
+    margin: 0 auto;  }
+/*PAGUINATION*/
+  .pagination {
+    flex-wrap: wrap; 
+    gap: 5px;
+  }
+
+  .pagination li a {
+    padding: 6px 10px; 
+    font-size: 0.9em;
+  }
+
+}
