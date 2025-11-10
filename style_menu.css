@@ -1,0 +1,113 @@
+    /*EN GENERAL*/
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+
+    /*FONDO*/
+    body{
+        height:100vh;
+        width:100vw;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background: url('./2DO_PARCIAL/IMAGENES/fondo.jpg') no-repeat center center fixed;
+        background-size: cover; /*cubre la imagen toda la pantalla*/
+        font-family: 'Poppins', sans-serif;
+    }
+    /*CONTENES DE DATOS*/
+    #menu_principal{
+        position:relative;
+        width:90%;/*100% del ancho de la ventana*/
+        max-width:400px; /*PARA EVITAR QUE SE EXPANDA MAS DE ESTPE TAMAÑO*/
+        height:470px;/*100% del alto de la ventana*/
+        background-color:#f3f0f776;
+        backdrop-filter: blur(12px);/*efecto de desenfoque*/
+        border-radius:25px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);/*ESTILO DE SOMBRA A LA CAJA */
+        text-align:center;
+        padding:30px 20px;
+    }
+/*IMAGEN*/
+    #foto_central{
+        width: 110px;
+        height:110px;
+        border-radius:50%;
+        border: 3px solid rgba(255, 255, 255, 0.7);
+        object-fit: cover;
+    }
+
+/*TEXTO*/
+    h1{
+        color:white;
+        font-size:16px;
+        position:relative;
+        top: 9px;
+    }
+
+    h4 {
+        color:black;
+        position:relative;
+        top: 15px;
+        
+    }
+    
+    p{
+        color:black;
+        position:relative;
+        top: 18px;
+        font-size:16px;
+    }
+
+    /*ACA ARANCA EL CUADRO DE REDES SOCIALES*/
+    .redes {
+        position:relative;
+        top: 30px;
+        text-align:center;
+    }
+
+    .espaciado_redes{
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    #icono_redes{
+        width:28px;
+        height:28px;
+    }
+    #icono_redes:hover {
+        transform: scale(1.15);
+    }    
+
+    .redes li{
+        display:inline-block;
+    }
+
+    /*ICONO DE PAGUINAS EN GRANDE*/
+
+    .links{
+        position:relative;
+        top: 50px;
+        height:35%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+
+    .iconos{
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 14px;
+        padding: 12px;
+        text-decoration: none;/*quitar el marco de subrayado*/
+        font-size:16px;    
+        color: #222;
+        font-size: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .iconos:hover {/*movimiento de los botones*/
+        background: rgba(255, 255, 255, 0.85);
+        transform: translateY(-3px);
+
+    }
