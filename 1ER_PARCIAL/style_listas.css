@@ -1,0 +1,36 @@
+*{
+        margin:0%;
+        padding:0%;
+    }
+.titulo 
+{
+    color: #c8a2ff;
+    font-size: 30px;
+    margin-top: 34px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #c8a2ff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.caja {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    margin-right: 25vw;
+    margin-left: 25vw;
+}
+
+
+ul {
+    list-style-type:circle;
+    padding-left: 20px;
+    text-align: left;
+}

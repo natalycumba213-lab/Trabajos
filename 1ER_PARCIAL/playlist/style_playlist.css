@@ -1,0 +1,112 @@
+*{
+            margin:0%;
+            padding:0%;
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            color: #333;
+        }
+        
+        .cuadro_playlist
+        {text-align: center;
+            display: flex;
+            margin: 20px;
+            gap: 20px; /* ME DA ESPACIOS */
+
+        }
+
+        main{
+            display:inline-block;
+            vertical-align: top;
+            flex: 1; /* OCUPA TODO EL ESPACIO POSIBLE */
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        aside{
+            display:inline-block;
+            width:20%;
+            height:100%;
+            margin-top: 55px;
+
+        }
+        aside li{
+            list-style-type: none;
+            height: 63.2px;
+            text-align: center;
+            background-color: #e6ccff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            transition: background 0.3s;
+
+        }
+        aside li a 
+        {
+        text-decoration: none;
+        color: #4b0082;
+        font-weight: bold;
+    
+      }
+       .sin_punto
+       {
+            list-style-type: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 20px; 
+            text-decoration:none;   
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+       }
+
+        footer
+        {
+        margin-top: 40px;
+        padding: 30px 20px;
+        background-color: #c8a2ff;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        }
+            
+        
+        .columna_style{
+            display:inline-block;
+            width: 30vh;
+            height: 100%;
+            vertical-align: top;
+            
+        }
+.letra_cancion{
+    white-space: pre-line;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+    padding: 20px;
+    background: #faf5ff;
+    border-radius: 10px;
+    color: #333;
+}
+
+.video_stilo
+{
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
+
+.titulo_encabezado
+{
+    color:#c8a2ff; 
+    font-size:35px;
+    text-align:center;
+    margin-bottom: 30px;
+}

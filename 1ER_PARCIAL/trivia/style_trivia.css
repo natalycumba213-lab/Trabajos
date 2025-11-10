@@ -1,0 +1,113 @@
+*{
+        margin:0%;
+        padding:0%;
+    }
+.encabezado_estilo_cuadro
+{
+    background-color:white;
+    text-align:center;
+    padding:20px;
+    box-shadow:9px 5px 14px #c8a2ff;
+
+}
+
+.titulo_encabezado
+{
+    color:#c8a2ff; 
+    margin:0px; 
+    font-size:35px;
+    text-align:center;
+}
+
+.palabra_encabezado
+{
+    font-size:14px; 
+    color:#555; 
+    margin:5px 0px 0px 0px;
+}
+
+/* CUADRO DE ELECCIONES*/
+
+.imagenes_trivia /* ESTILO DE CIRCULOS*/
+{
+    width:226px;
+    height:179px;
+    border-radius: 45%;
+    box-shadow:4px 2px 2px rgb(7, 7, 7);
+                }
+.espacio_entre_imagenes
+{
+    margin-left: 43px;
+}
+
+.estructura_imagenes /*TAMAÑO DE IMAGENES*/
+{ 
+    display:flex;
+    justify-content:center; 
+    gap:40px; 
+    margin-top:20px
+}
+
+
+#fondo_cuadro /* COLOR Y FORMA DE CUADR*/
+{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 15px 5px 20px rgb(212, 209, 214);
+    margin: 50px 100px 50px 100px;
+    padding:10px 10px 10px 10px;
+    width: 700px;
+    height: 300px;
+    border-radius:15px
+    
+}
+
+.texto_cuadro_trivia
+{
+    margin: 20px 60px 46px 60px;
+    color:rgb(136, 131, 137);
+    font-family:times-new-roman;
+
+}
+
+/* PAGUINA PRINCIPAL */
+.imagen_principal_introduccion
+{
+    width: 570px;
+    height: 400px;
+    box-shadow:4px 2px 2px rgb(7, 7, 7);
+    border-radius:5px;
+    margin-top:20px;
+    text-align:center;
+}
+.estructura_principal
+{
+    width:60vw; 
+    height:60vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.jugar-btn {
+  display: inline-block;   /* para que se comporte como botón */
+  background-color: #c8a2ff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;   /* quita el subrayado del enlace */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.jugar-btn:hover {
+  background-color: #a36ff0;
+  transform: scale(1.05);
+}
+
+
+#estilo_nav
+{text-align: left;
+
+}
