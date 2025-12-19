@@ -1,0 +1,270 @@
+/*GENERAL*/
+    :root {/* ES MAS FACIL PARA GENERALIZAR COLORES */
+      --primario: #82A6A2;
+      --secundario: #D9A441;
+      --secundario-oscuro: #c59741;
+      --acento: #E3B6A4;
+      --blanco: #FFFFFF;
+      --gris-claro: #F5F5F5;
+      --gris-medio: #BDBDBD;
+      --gris-oscuro: #4A4A4A;
+      --gris-medio-transparente:#82a6a2df ;    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: var(--gris-claro);/*DE ESTA MANERA LO LLAMAMOS AL COLOR*/
+      color: var(--gris-oscuro);    }
+
+/*MENU DE ARRIBA*/
+  header {
+    background-color: var(--blanco);/*fondo del menu*/
+    display: flex;
+    justify-content: space-between;/*espacio entre elementos*/
+    align-items: center;
+    padding: 1rem;
+    color: var(--primario);
+    position: sticky;
+    top: 0;/*es vital para que funcione el sticky*/
+    border-bottom: 2px solid var(--gris-medio);/*borde del menu*/ 
+    z-index: 1000; /*PARA QUE QUEDE ARRIBA EL MENU*/}
+  
+    /* ESTILO DE IMAGEN LOGO */
+ .logo img {
+    height: 120px;       
+    width: AUTO;
+    border-radius: 50%;
+    object-fit: contain;}
+  
+ /*ESTILO DE LOS LINKS DEL MENU*/
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;/*espaciado*/}
+  
+  .nav-links a {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    font-family: 'Montserrat';  }
+  
+    /*COLOR DE TRANSICION*/
+  .nav-links a:hover {
+    color: var(--secundario);  }
+  
+  /* KEBAB PARA CELULARES */
+  .kebab-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;  }
+  
+  /* Menu overlay (desplegable) para dispositivos móviles */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    background-color: var(--gris-medio-transparente) ;/*PEGUNTAR AL PROFE OPINION DEL COLOR*/
+    color: var(--gris-claro);
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;  }
+  
+  .overlay.active {
+    display: flex;   }
+  
+  .overlay ul {
+    list-style: none;
+    text-align: center;  }
+  
+  .overlay a {
+    display: block;
+    color:var(--gris-claro);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-decoration: none;  }
+
+  .overlay li:hover {
+    background-color: var(--primario);}
+   
+  /*ESTILO BOTON DONAR*/  
+   .boton_donar {
+    background: var(--secundario);
+    padding: 10px 20px;/*TAMAÑO DE BOTON*/
+    border-radius: 8px;
+    color: var(--blanco);
+    font-weight: bold;/*NEGRITA*/
+    border: none;
+    font-family: 'Montserrat';
+    letter-spacing: 1.5px;/*ESPACIADO ENTRE LETRAS*/
+    cursor:pointer;/*EL CURSOR CAMBIE CUANDO ESTE SOBRE EL*/    }  
+
+  /*COLOR DE TRANSICION*/
+  .boton_donar:hover{
+  background: var(--secundario-oscuro); }
+   
+  /*RESPONSIVE DE MENU*/
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Oculta los enlaces en pantallas pequeñas */ }
+    .kebab-icon {
+      display: block; /* Muestra el icono kebab */}  
+    .titulo_seccion h1 {
+        font-size: 30px;
+    }
+    .titulo_seccion p {
+        font-size: 16px;
+    }}
+  
+ /* FOOTER */
+  footer {
+  background: var(--gris-oscuro);
+  color: white;
+  padding: 40px;
+  text-align: center;    }
+  
+  .boton_footer{
+  margin-top: 50px;
+  background: var(--secundario);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px; /* Botón redondeado tipo ONG */
+  font-weight: bold;
+  cursor: pointer;}
+
+  .boton_footer:hover {
+  background: var( --secundario-oscuro);    }
+
+
+
+/*DIFERENCIA*/    
+
+/* CONTENEDOR PRINCIPAL */
+.seccion-contacto { 
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 5%;
+    padding-right: 5%;}
+
+.contenedor-grid {/* USAMOS FLEXBOX PARA HACER DOS COLUMNAS */
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;}
+
+/* COLUMNA REDES */
+.columna-redes { /* OCUPA 1 PARTE DEL ESPACIO DISPONIBLE */
+    flex: 1; }
+
+.columna-redes h1 { 
+    font-family: 'Montserrat'; 
+    color: #82A6A2; 
+    font-size: 35px; 
+    margin-bottom: 20px; }
+
+.redes_sociales { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 15px; }
+
+.redes_sociales img { 
+    width: 35px; 
+    height: 35px; }
+
+
+/* COLUMNA FORMULARIO */
+.columna-formulario { 
+    flex: 1.2; }
+
+.caja-formulario {
+    background:var(--blanco);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);}
+
+.campo { 
+    margin-bottom: 15px; }
+
+.campo label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    color: var(--acento); }
+
+.campo input, .campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;/*QUITAR EL BORDE AZUL AL SELECCIONAR*/}
+
+.boton_enviar{
+    width: 100%;
+    padding: 15px;
+    background-color:var(--primario);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;}
+
+.boton_enviar:hover { 
+    background-color: var(--gris-medio-transparente) }
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contenedor-grid { flex-direction: column; }
+    .header-principal { flex-direction: column; gap: 15px; text-align: center; }
+}
+
+
+/*MODO DARK*/
+
+/* ACAMBIOS DE COLORES */
+.dark-mode {
+    background-color: #1a1a1a !important;
+    color: white !important;}
+
+
+.dark-mode header, 
+.dark-mode .caja-formulario, 
+.dark-mode footer {
+    background-color: #2d2d2d !important;
+    color: white !important;
+    border-color: #444 !important;}
+
+.dark-mode .nav-links a, 
+.dark-mode .campo label {
+    color: var(--blanco) !important;}
+
+/* ESTILO DE BOTON */
+.boton-modo {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: var(--primario);
+    color:var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat';}
+
+.boton-modo:hover {
+    background-color: var(--gris-medio-transparente);}
+
+/*UNIR BOTONES*/
+
+.botones-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+

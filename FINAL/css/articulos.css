@@ -1,0 +1,284 @@
+
+/*GENERAL*/
+    :root {/* ES MAS FACIL PARA GENERALIZAR COLORES */
+      --primario: #82A6A2;
+      --secundario: #D9A441;
+      --secundario-oscuro: #c59741;
+      --acento: #E3B6A4;
+      --blanco: #FFFFFF;
+      --gris-claro: #F5F5F5;
+      --gris-medio: #BDBDBD;
+      --gris-oscuro: #4A4A4A;
+      --gris-medio-transparente:#82a6a2df ;    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: var(--gris-claro);/*DE ESTA MANERA LO LLAMAMOS AL COLOR*/
+      color: var(--gris-oscuro);    }
+
+
+
+/*MENU DE ARRIBA*/
+  header {
+    background-color: var(--blanco);/*fondo del menu*/
+    display: flex;
+    justify-content: space-between;/*espacio entre elementos*/
+    align-items: center;
+    padding: 1rem;
+    color: var(--primario);
+    position: sticky;
+    top: 0;/*es vital para que funcione el sticky*/
+    border-bottom: 2px solid var(--gris-medio);/*borde del menu*/ 
+    z-index: 1000; /*PARA QUE QUEDE ARRIBA EL MENU*/}
+  
+    /* ESTILO DE IMAGEN LOGO */
+ .logo img {
+    height: 120px;       
+    width: AUTO;
+    border-radius: 50%;
+    object-fit: contain;}
+  
+ /*ESTILO DE LOS LINKS DEL MENU*/
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;/*espaciado*/}
+  
+  .nav-links a {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    font-family: 'Montserrat';  }
+  
+    /*COLOR DE TRANSICION*/
+  .nav-links a:hover {
+    color: var(--secundario);  }
+  
+  /* KEBAB PARA CELULARES */
+  .kebab-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;  }
+  
+  /* Menu overlay (desplegable) para dispositivos móviles */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    background-color: var(--gris-medio-transparente) ;/*PEGUNTAR AL PROFE OPINION DEL COLOR*/
+    color: var(--gris-claro);
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;  }
+  
+  .overlay.active {
+    display: flex;   }
+  
+  .overlay ul {
+    list-style: none;
+    text-align: center;  }
+  
+  .overlay a {
+    display: block;
+    color:var(--gris-claro);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-decoration: none;  }
+
+  .overlay li:hover {
+    background-color: var(--primario);}
+   
+  /*ESTILO BOTON DONAR*/  
+   .boton_donar {
+    background: var(--secundario);
+    padding: 10px 20px;/*TAMAÑO DE BOTON*/
+    border-radius: 8px;
+    color: var(--blanco);
+    font-weight: bold;/*NEGRITA*/
+    border: none;
+    font-family: 'Montserrat';
+    letter-spacing: 1.5px;/*ESPACIADO ENTRE LETRAS*/
+    cursor:pointer;/*EL CURSOR CAMBIE CUANDO ESTE SOBRE EL*/    }  
+
+  /*COLOR DE TRANSICION*/
+  .boton_donar:hover{
+  background: var(--secundario-oscuro); }
+   
+  /*RESPONSIVE DE MENU*/
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Oculta los enlaces en pantallas pequeñas */ }
+    .kebab-icon {
+      display: block; /* Muestra el icono kebab */}  
+
+  }
+  
+
+
+/* ESTILO DEL TÍTULO PRINCIPAL */
+.titulo_seccion {
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+    background-color: var(--blanco); }
+
+.titulo_seccion h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    color: var(--gris-oscuro);
+    margin-bottom: 10px;
+    text-transform: uppercase;/*PONER EN MAYUSCULA*/
+    letter-spacing: 1px;}
+
+.titulo_seccion p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: var(--gris-medio);
+    max-width: 600px;
+    margin: 0 auto 20px auto; /* Centra el párrafo */}
+
+/* Línea decorativa debajo del título */
+.linea_decorativa {
+    width: 80px;
+    height: 4px;
+    background-color: var(--acento);
+    margin: 0 auto;
+    border-radius: 2px;}
+
+
+
+/*ARTICULOS*/
+/* ARTICULOS ESTETICA DEL BLOQUE*/
+.centrado_articulos {
+  display: grid;/*QUE SE ACOMODE AUTOMATICAMNETE LAS TARJETAS SEGUN EL TAMAÑO DE PANTALLA*/
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  /*TRAJETAS SE ADAPTAN A LA PANTALLA,280PX MINIMO Y 1FR MAXIMO [UNA FRACCION IGUAL DES ESPACIO DELC ONTENEDOR*/
+  gap:3%; /*ESPACIO ENTRE LAS TARJETAS*/
+  max-width: 1100px; /*ANCHO MAXIMO DEL CONTENEDOR DE LAS TARJETAS*/
+  margin: 30px auto;
+  padding: 0 20px;}
+
+/* ESTETICA DE CADA ARTICULO */
+.estetica_articulo {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;}
+
+/*MOV DE LA CARTA DE CADA ARTICULO*/
+.estetica_articulo:hover {
+  transform: scale(1.02);}
+
+/*ESTETICA DE LA IMAGEN*/
+.estetica_articulo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;/*IMAGEN CUBRA TODO EL CONTENEDOR*/}
+
+/*espacido de aca articulo*/
+.cada_articulo {
+  padding: 25px;}
+
+ /*ESTETICA TEXTO DE CADA ARTICULO*/
+.cada_articulo h3 {
+  color: var(--primario);
+  margin-bottom: 7px;}
+
+.cada_articulo p {
+  margin-bottom: 7px;}
+
+/*QUITAR EL SUBYRAYADO Y DAR COLOR A LOS ENLACES DE CADA ARTICULO*/
+.cada_articulo a {
+  text-decoration: none;
+  color: var(--secundario);
+  font-weight: bold;/*LETRA EN NEGRITA*/}
+
+
+/* FOOTER */
+  footer {
+  background: var(--gris-oscuro);
+  color: white;
+  padding: 40px;
+  text-align: center;    }
+  
+  .boton_footer{
+  margin-top: 50px;
+  background: var(--primario);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px; /* Botón redondeado tipo ONG */
+  font-weight: bold;
+  cursor: pointer;}
+
+  .boton_footer:hover {
+  background: var( --gris-medio-transparente);    }
+
+
+/*DARK MODE*/
+/*FONDO GENERAL*/
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;}
+
+/*  HEADER Y NAV */
+body.dark-mode header {
+    background-color: #1e1e1e !important;
+    border-bottom: 2px solid #333 !important;}
+
+body.dark-mode .nav-links a {
+    color: #ffffff !important;}
+
+/* CONTENEDORES*/
+body.dark-mode .titulo_seccion,
+body.dark-mode .centrado_articulos {
+    background-color: #121212 !important;}
+
+/* LAS TARJETAS DE PROYECTOS  */
+body.dark-mode .estetica_articulo {
+    background-color: #1e1e1e !important; /* Fondo gris oscuro para la tarjeta */
+    border: 1px solid #333 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important; /* Sombra más pesada */
+    color: #ffffff !important;}
+
+/* TEXTO DE C/D ARTICULO*/
+body.dark-mode .cada_articulo h3 {
+    color: #82A6A2 !important; /* Verde agua para el título del artículo */}
+
+body.dark-mode .cada_articulo p {
+    color: #cccccc !important;}
+
+/* LEER MAS*/
+body.dark-mode .cada_articulo a {
+    color: #D9A441 !important; /* Dorado para que resalte en la oscuridad */
+    font-weight: bold;}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #000000 !important;}
+
+/*ESTILO DE BOTON*/
+.boton-modo {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: var(--primario);
+    color:var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat';}
+
+.boton-modo:hover {
+    background-color: var(--gris-medio-transparente);}
+
+    /*UNIR BOTONES*/
+
+.botones-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}

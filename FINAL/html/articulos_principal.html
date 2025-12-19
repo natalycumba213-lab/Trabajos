@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTOS</title>
+     <link rel="stylesheet" href="../css/articulos.css" />
+         <link rel="stylesheet" href="../css/modal.css">
+     <script src="../scrip/inicio.js" defer></script>
+     <link rel="icon" type="image/x-icon" href="../imagenes/logo_sin_fondo.png">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--MENU DE ARRIBA-->    
+  <header>
+    <div class="logo">
+        <img src="../imagenes/logo_sin_fondo.png" alt="Logo Un Hogar Más" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+      </ul>
+      <div class="kebab-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+ <div class="botones-header"> 
+    <button class="boton_donar" onclick="abrirModal()">Donar</button>
+
+    <!--MODO DARCK-->
+    <button class="boton-modo" onclick="cambiarModo()">Cambiar Modo</button>
+  
+  </div>
+  </header>
+
+ <!--PARA CELULAR--> 
+  <div class="overlay" id="overlay" onclick="toggleMenu()">
+    <ul class="mobile-nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+
+<!--TITULO-->
+<div class="titulo_seccion">
+    <h1>Nuestros Proyectos y Rescates</h1>
+    <p>Conocé las historias de los que ya no tienen voz y cómo estamos cambiando su realidad.</p>
+    <div class="linea_decorativa"></div>
+</div>
+
+
+<!--SECCION DE ARTICULOS-->
+<main class="centrado_articulos">
+
+  <article class="estetica_articulo" id="ver1">
+    <img src="../imagenes/articulo1.webp" alt="#">
+    <div class="cada_articulo">
+      <h3>Rescate Exitoso de 10 perros</h3>
+      <p>Conocé la emocionante historia de superación de los cachorros que hoy esperan una familia.</p>
+      <a href="./articulo_1.html">Leer más</a>
+    </div>
+  </article>
+
+  <article class="estetica_articulo" id="ver2">
+    <img src="../imagenes/aticulo2.jpg" alt="#">
+    <div class="cada_articulo">
+      <h3>Proxima jornada de adopcion masiva</h3>
+      <p>Te esperamos este sábado para que encuentres a tu mejor amigo en nuestro gran evento anual.</p>
+      <a href="./articulo_2.html">Leer más</a>
+    </div>
+  </article>
+
+  <article class="estetica_articulo" id="ver3">
+    <img src="../imagenes/articulo3.jpg" alt="#">
+    <div class="cada_articulo">
+      <h3>campaña Gratuita de Vacunacion</h3>
+      <p>Acercate a nuestros puntos de salud para proteger a tu mascota de forma segura y sin costo. </p>
+      <a href="./articulo_3.html">Leer más</a>
+    </div>
+  </article>
+</main>
+</main>
+
+
+
+
+<!-- FOOTER -->
+<footer id="footer">
+  <p>Un Hogar Más - 2024</p>
+ <button class="boton_footer" onclick="abrirModal()">Donar</button>
+</footer>
+
+</body>
+
+<div id="modal-donar" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    
+    <h2>DONAR</h2>
+    <p class="explicacion">Tu ayuda permite que nuestros rescatados vivan mejor.</p>
+
+    <div class="contenedor-opciones">
+      <div class="opcion-donacion">
+        <div class="precio-circulo">10$</div>
+        <p>Una cama para un perro</p>
+        <div class="interaccion">
+          <span id="contador-camas" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('camas')">COMPRAR CAMA</button>
+        </div>
+      </div>
+
+      <div class="opcion-donacion">
+        <div class="precio-circulo">5$</div>
+        <p>Plato de comida premium</p>
+        <div class="interaccion">
+          <span id="contador-comida" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('comida')">COMPRAR COMIDA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

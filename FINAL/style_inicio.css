@@ -1,0 +1,508 @@
+
+/*GENERAL*/
+    :root {/* ES MAS FACIL PARA GENERALIZAR COLORES */
+      --primario: #82A6A2;
+      --secundario: #D9A441;
+      --secundario-oscuro: #c59741;
+      --acento: #E3B6A4;
+      --blanco: #FFFFFF;
+      --gris-claro: #F5F5F5;
+      --gris-medio: #BDBDBD;
+      --gris-oscuro: #4A4A4A;
+      --gris-medio-transparente:#82a6a2df ;    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: var(--gris-claro);/*DE ESTA MANERA LO LLAMAMOS AL COLOR*/
+      color: var(--gris-oscuro);    }
+
+/*MENU DE ARRIBA*/
+  header {
+    background-color: var(--blanco);/*fondo del menu*/
+    display: flex;
+    justify-content: space-between;/*espacio entre elementos*/
+    align-items: center;
+    padding: 1rem;
+    color: var(--primario);
+    position: sticky;
+    top: 0;/*es vital para que funcione el sticky*/
+    border-bottom: 2px solid var(--gris-medio);/*borde del menu*/ 
+    z-index: 1000; /*PARA QUE QUEDE ARRIBA EL MENU*/
+  }
+  
+    /* ESTILO DE IMAGEN LOGO */
+ .logo img {
+    height: 120px;       
+    width: AUTO;
+    border-radius: 50%;
+    object-fit: contain;}
+  
+ /*ESTILO DE LOS LINKS DEL MENU*/
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;/*espaciado*/}
+  
+  .nav-links a {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    font-family: 'Montserrat';  }
+  
+    /*COLOR DE TRANSICION*/
+  .nav-links a:hover {
+    color: var(--secundario);  }
+  
+  /* KEBAB PARA CELULARES */
+  .kebab-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;  }
+  
+  /* Menu overlay (desplegable) para dispositivos móviles */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    background-color: var(--gris-medio-transparente) ;/*PEGUNTAR AL PROFE OPINION DEL COLOR*/
+    color: var(--gris-claro);
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;  }
+  
+  .overlay.active {
+    display: flex;   }
+  
+  .overlay ul {
+    list-style: none;
+    text-align: center;  }
+  
+  .overlay a {
+    display: block;
+    color:var(--gris-claro);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-decoration: none;  }
+
+  .overlay li:hover {
+    background-color: var(--primario);}
+   
+  /*ESTILO BOTON DONAR*/  
+   .boton_donar {
+    background: var(--secundario);
+    padding: 10px 20px;/*TAMAÑO DE BOTON*/
+    border-radius: 8px;
+    color: var(--blanco);
+    font-weight: bold;/*NEGRITA*/
+    border: none;
+    font-family: 'Montserrat';
+    letter-spacing: 1.5px;/*ESPACIADO ENTRE LETRAS*/
+    cursor:pointer;/*EL CURSOR CAMBIE CUANDO ESTE SOBRE EL*/    }  
+
+  /*COLOR DE TRANSICION*/
+  .boton_donar:hover{
+  background: var(--secundario-oscuro); }
+  
+
+  /*RESPONSIVE DE MENU*/
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Oculta los enlaces en pantallas pequeñas */ }
+    .kebab-icon {
+      display: block; /* Muestra el icono kebab */}  }
+  
+
+    /* BLOQUE A */
+    #inicio {
+      display: flex;
+      padding: 90px;
+      align-items: center;
+      justify-content: space-between;
+      background-image: url("./imagenes/perro1.avif"); 
+      background-size: cover;     /* Hace que la imagen cubra todo el bloque */
+      background-position: center;/* Centra la imagen */
+      background-repeat: no-repeat; 
+      border-radius: 0px; /* Si querés bordes rectos */ 
+   }
+
+    #inicio .texto {
+      max-width: 45%;   
+    font-weight: bold; }
+
+    #inicio h1 {
+      font-family: 'Montserrat';
+      font-size: 40px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+      color: var(--gris-oscuro);    }
+
+    .texto p {
+      font-family: 'Nunito';
+      color: var(--gris-oscuro)
+
+    }  
+    .estilo_botones {
+      background: var(--primario);
+      color: var(--blanco);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;    }
+
+    .img-principal {
+      width: auto;
+      height: 320px;
+      background: var(--gris-medio);
+      border-radius: 20px;    }
+
+    .estilo_botones:hover {
+      background: var( --gris-medio-transparente);    }
+
+    /* BLOQUE B */ 
+    #estadisticas {
+      padding: 40px 0;
+      background: var(--blanco);
+      text-align: center;    }
+
+    #estadisticas h2 {
+      font-family: 'Montserrat';
+      font-size: 32px;    }
+
+    .valores {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      padding-top: 40px;    }
+
+    .valor_item {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--primario);    }
+
+    /* BLOQUE C */
+    #mision {
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      gap: 50px;
+      background: var(--gris-claro);}
+
+    #mision h2 {
+      font-family: 'Montserrat';
+      font-size: 32px;   }
+
+    .img-mision {
+      width: 25%;
+      border-radius: 20%;  
+      overflow: hidden;
+      aspect-ratio: 1/1;  
+      flex-shrink: 0;}/*oculta lo que se salga de los bordes redondeados*/
+
+    .img-mision img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Esto hará que se adapte sin deformarse */
+      display: block;    /* Elimina espacios extra debajo de la imagen */}
+
+    .estilo_boton{
+      background: var(--primario);
+      color: var(--blanco);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+       text-decoration: none;
+      font-weight: 600;      }  
+
+    .estilo_boton:hover{
+      background: var( --gris-medio-transparente);    }
+
+
+    /* BLOQUE D */
+    #donaciones {
+      padding: 80px;
+      background: var(--blanco);
+      text-align: center;    }
+
+    #donaciones h2 {
+      color: var(--secundario);
+      font-family: 'Montserrat';    }
+
+    .btn-dona2 {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: var(--acento);
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;    }
+
+  .galeria-carrousel{
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+    gap: 1em; }
+
+  .galeria-carrousel::-webkit-scrollbar
+  {    display:none}/*quitarme la line de desplazamiento*/
+
+  .foto{
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 1em;
+  background: #82a6a2df;
+  font-size: 3em;/*tamaño del icono*/
+  border-radius:.2em;
+  text-align: center;
+  background-size: cover;     /* Hace que la imagen cubra todo el bloque */
+  background-position: center;/* Centra la imagen */
+  background-repeat: no-repeat; 
+  animation: spin 60s linear infinite; }
+
+
+  .grupo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1em;
+    padding-right: 1em;}
+
+  @keyframes spin{
+  from {transform:translateX(0)}
+  to{transform: translateX(-100%)}  }
+
+    /* BLOQUE E */
+  #articulos {
+    padding: 10px 20px;
+    background: var(--gris-claro);
+    text-align: center;}
+
+  #articulos h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 45px;
+    color: var(--gris-oscuro);  }
+
+  .tarjetas {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-bottom: 40px;
+    flex-wrap: wrap; /*PARA QUE SE PONGA UNO DEBAJO DEL OTRO EN PANTALLAS PEQUEÑAS*/  }
+
+  .cada_articulo {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* El texto se queda abajo */
+    text-decoration: none;
+    overflow: hidden;/* Para que el contenido no se salga de los bordes redondeados */
+    transition: all 0.4s ease;  }
+
+/* Efecto sombra para que el texto blanco se lea perfecto */
+.cada_articulo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 60%);
+  z-index: 1;}
+
+/* Zoom suave al pasar el mouse */
+.cada_articulo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);}
+
+.contenido_cada_articulo{
+  position: relative;
+  z-index: 2; /* Sube el texto por encima de la sombra negra */
+  padding: 25px;
+  text-align: left;
+  color: white;}
+
+.titulo_articulos {
+  background: var(--primario); /* Color verde o azul de tu ONG */
+  color: white;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 12px;}
+
+.cada_articulo h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  line-height: 1.3;/* Espaciado entre líneas */
+  margin-bottom: 8px;}
+
+.fecha {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  opacity: 0.8;}
+
+.boton_articulos{
+  margin-top: 80px;
+  margin-bottom: 50vw;
+  background: var(--secundario);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px; /* Botón redondeado tipo ONG */
+  font-weight: bold;
+  cursor: pointer;}
+
+.boton_articulos:hover{
+     background: var(  --secundario-oscuro);   }
+
+    /* FOOTER */
+  footer {
+  background: var(--gris-oscuro);
+  color: white;
+  padding: 40px;
+  margin-top: 50px;
+  text-align: center;    }
+  
+  .boton_footer{
+  margin-top: 50px;
+  background: var(--primario);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px; /* Botón redondeado tipo ONG */
+  font-weight: bold;
+  cursor: pointer;}
+
+  .boton_footer:hover {
+  background: var( --gris-medio-transparente);    }
+
+/*UNIR BOTONES*/
+
+.botones-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+
+
+
+@media (max-width: 768px) {
+     .nav-links {
+      display: none; 
+    }
+        .kebab-icon {
+      display: block; 
+    }
+    #estadisticas {
+    padding: 30px 15px;
+    background: var(--blanco);
+    text-align: center;
+}
+
+.valores {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.valor_item {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primario);
+    padding: 15px;
+    width: 80%; 
+    border-bottom: 1px solid var(--gris-claro); 
+}
+    .botones-header {
+        gap: 5px;
+    }
+    
+    .boton_donar, .boton-modo {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+/*DARK*/
+
+/* GENERAL */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/*  MENU*/
+body.dark-mode header {
+    background-color: #1a1a1a !important;
+    border-bottom: 2px solid #333 !important;}
+
+body.dark-mode .nav-links a {
+    color: #ffffff !important;}
+
+/*BLOQUE B */
+body.dark-mode #estadisticas {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;}
+
+body.dark-mode .valor_item {
+    background-color: #252525 !important;
+    border: 1px solid #444 !important;
+    color: #82A6A2 !important; }
+
+/*  BLOQUE C*/
+body.dark-mode #mision {
+    background-color: #121212 !important;}
+
+/* BLOQUE D */
+body.dark-mode #donaciones {
+    background-color: #1a1a1a !important;}
+
+/* BLOQUE E*/
+body.dark-mode #articulos {
+    background-color: #121212 !important;}
+
+/* Tarjetas de artículos en el inicio */
+body.dark-mode .contenido_cada_articulo {
+    background: rgba(0, 0, 0, 0.8) !important; }
+
+body.dark-mode .contenido_cada_articulo h3 {
+    color: #ffffff !important;}
+
+body.dark-mode .titulo_articulos {
+    color: var(--blanco) !important; }
+
+/* 7. Footer */
+body.dark-mode footer {
+    background-color: #000000 !important;}
+
+/* BOTON ESTILO */
+.boton-modo {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: var(--primario);
+    color:var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat';}
+
+.boton-modo:hover {
+    background-color: var(--gris-medio-transparente);}
+
+

@@ -1,0 +1,274 @@
+/*GENERAL*/
+    :root {/* ES MAS FACIL PARA GENERALIZAR COLORES */
+      --primario: #82A6A2;
+      --secundario: #D9A441;
+      --secundario-oscuro: #c59741;
+      --acento: #E3B6A4;
+      --blanco: #FFFFFF;
+      --gris-claro: #F5F5F5;
+      --gris-medio: #BDBDBD;
+      --gris-oscuro: #4A4A4A;
+      --gris-medio-transparente:#82a6a2df ;    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: var(--gris-claro);/*DE ESTA MANERA LO LLAMAMOS AL COLOR*/
+      color: var(--gris-oscuro);    }
+
+
+
+
+/*MENU DE ARRIBA*/
+  header {
+    background-color: var(--blanco);/*fondo del menu*/
+    display: flex;
+    justify-content: space-between;/*espacio entre elementos*/
+    align-items: center;
+    padding: 1rem;
+    color: var(--primario);
+    position: sticky;
+    top: 0;/*es vital para que funcione el sticky*/
+    border-bottom: 2px solid var(--gris-medio);/*borde del menu*/ 
+    z-index: 1000; /*PARA QUE QUEDE ARRIBA EL MENU*/}
+  
+    /* ESTILO DE IMAGEN LOGO */
+ .logo img {
+    height: 120px;       
+    width: AUTO;
+    border-radius: 50%;
+    object-fit: contain;}
+  
+ /*ESTILO DE LOS LINKS DEL MENU*/
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;/*espaciado*/}
+  
+  .nav-links a {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    font-family: 'Montserrat';  }
+  
+    /*COLOR DE TRANSICION*/
+  .nav-links a:hover {
+    color: var(--secundario);  }
+  
+  /* KEBAB PARA CELULARES */
+  .kebab-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;  }
+  
+  /* Menu overlay (desplegable) para dispositivos móviles */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    background-color: var(--gris-medio-transparente) ;/*PEGUNTAR AL PROFE OPINION DEL COLOR*/
+    color: var(--gris-claro);
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;  }
+  
+  .overlay.active {
+    display: flex;   }
+  
+  .overlay ul {
+    list-style: none;
+    text-align: center;  }
+  
+  .overlay a {
+    display: block;
+    color:var(--gris-claro);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-decoration: none;  }
+
+  .overlay li:hover {
+    background-color: var(--primario);}
+   
+  /*ESTILO BOTON DONAR*/  
+   .boton_donar {
+    background: var(--secundario);
+    padding: 10px 20px;/*TAMAÑO DE BOTON*/
+    border-radius: 8px;
+    color: var(--blanco);
+    font-weight: bold;/*NEGRITA*/
+    border: none;
+    font-family: 'Montserrat';
+    letter-spacing: 1.5px;/*ESPACIADO ENTRE LETRAS*/
+    cursor:pointer;/*EL CURSOR CAMBIE CUANDO ESTE SOBRE EL*/    }  
+
+  /*COLOR DE TRANSICION*/
+  .boton_donar:hover{
+  background: var(--secundario-oscuro); }
+   
+  /*RESPONSIVE DE MENU*/
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Oculta los enlaces en pantallas pequeñas */ }
+    .kebab-icon {
+      display: block; /* Muestra el icono kebab */}  
+    .titulo_seccion h1 {
+        font-size: 30px;
+    }
+    .titulo_seccion p {
+        font-size: 16px;
+    }}
+  
+
+/* BARRA DE PROGRESO */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: var(--secundario);
+    width: 0%;
+    z-index: 2000;}
+
+/* CONTENEDOR DE LECTURA */
+.lectura-contenedor {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 50px;}
+
+.encabezado-articulo {
+    text-align: center;
+    margin-bottom: 40px;}
+
+.imagen-principal-blog {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;}
+
+.subtitulo {/*DE LA FRASE ABAJO DEL TITULO*/
+    font-size: 20px;
+    color: var(--gris-medio);
+    font-style: italic;}/*CURSIVA*/
+
+.cuerpo-texto {
+    line-height: 1.8;
+    font-size: 18px;}
+
+blockquote {/*CITAS TEXTUALES*/
+    border-left: 5px solid var(--secundario);
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--gris-oscuro);
+    background: var(--gris-claro);
+    padding: 20px;}
+
+.caja-accion {/*CAJA DE ACCION AL FINAL DEL ARTICULO*/
+    background: var(--gris-claro);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 50px;
+    border: 2px dashed var(--primario);}
+
+
+    /* FOOTER */
+  footer {
+  background: var(--gris-oscuro);
+  color: white;
+  padding: 40px;
+  text-align: center;    }
+  
+  .boton_footer{
+  margin-top: 50px;
+  background: var(--primario);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px; /* Botón redondeado tipo ONG */
+  font-weight: bold;
+  cursor: pointer;}
+
+  .boton_footer:hover {
+  background: var( --gris-medio-transparente);    }
+
+  /*DARK*/
+/*  FONDO */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #d1d1d1 !important; /* Gris claro, más relajante que el blanco */}
+
+/* Header y Navegación */
+body.dark-mode header {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333 !important;}
+
+body.dark-mode .nav-links a {
+    color: #ffffff !important;}
+
+/*  Contenedor de lectura */
+body.dark-mode .lectura-contenedor {
+    background-color: #121212 !important;}
+
+/*  Títulos y Subtítulos */
+body.dark-mode h1 {
+    color: #ffffff !important;}
+
+body.dark-mode .subtitulo {
+    color: #82A6A2 !important; /* El verde de la ONG resalta bien aquí */}
+
+body.dark-mode h2 {
+    color: #D9A441 !important; /* Dorado para los subtítulos internos */}
+
+/*  EL BLOCKQUOTE  */
+body.dark-mode blockquote {
+    background-color: #1e1e1e !important;
+    border-left: 5px solid #82A6A2 !important;
+    color: #eeeeee !important;
+    font-style: italic;
+    padding: 20px;
+}
+
+/*  Barra de progreso  */
+body.dark-mode #progress-bar {
+    background-color: #D9A441 !important; /* Barra dorada en modo oscuro */
+}
+
+/*  Footer */
+body.dark-mode footer {
+    background-color: #000000 !important;
+    color: #888 !important;
+}
+
+/* BOTON ESTILO */
+.boton-modo {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: var(--primario);
+    color:var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat';}
+
+.boton-modo:hover {
+    background-color: var(--gris-medio-transparente);}
+
+    /*UNIR BOTONES*/
+
+.botones-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+
+
+
+

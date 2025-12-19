@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Un Hogar Más</title>
+    <link rel="stylesheet" href="../css/sobre_nosotros.css">
+    <script src="../scrip/sobre_ong.js" defer></script>
+    <script src="../scrip/inicio.js" defer></script>
+    <link rel="stylesheet" href="../css/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img src="../imagenes/logo_sin_fondo.png" alt="Logo Un Hogar Más" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+      </ul>
+      <div class="kebab-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+<div class="botones-header"> 
+    <button class="boton_donar" onclick="abrirModal()">Donar</button>
+
+    <!--MODO DARCK-->
+    <button class="boton-modo" onclick="cambiarModo()">Cambiar Modo</button>
+  
+  </div>
+  </header>
+
+ <!--PARA CELULAR--> 
+  <div class="overlay" id="overlay" onclick="toggleMenu()">
+    <ul class="mobile-nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  
+<!--PAGUINA CONTENIDO-->
+
+
+<!--TITULO-->
+<div class="titulo_seccion">
+    <h1>Quiénes Somos</h1>
+    <p>Un equipo unido por el amor incondicional a los animales y la convicción de que ningún ser vivo merece vivir en el olvido.</p>
+    <div class="linea_decorativa"></div>
+</div>
+
+
+<main class="centrado_articulos">
+<!--primera seccion-->
+  <section class="seccion-texto-imagen contenedor">
+    <div class="columna-texto">
+        <h2>¿Cómo se creó la ONG "Un Hogar Más"?</h2>
+        <p>La historia de <strong>Un Hogar Más</strong> comenzó una fría noche de invierno en 2019, en un rincón olvidado de Buenos Aires. Un grupo de amigos, conmovidos por el hallazgo de una camada de cachorros abandonados, encendió una chispa de esperanza.</p>
+        <p>Hoy somos un refugio que trabaja por la salud, educación y rescate animal.</p>
+    </div>
+
+    <div class="columna-img">
+        <img src="../imagenes/PERRO10.webp" alt="Primer rescate">
+    </div>
+  </section>
+
+<!--segunda seccion-->
+  <section class="seccion-texto-imagen contenedor inversa">
+    <div class="columna-texto">
+        <h2>Cuál es nuestro propósito</h2>
+        <p>Buscamos ofrecer una <strong>asistencia integral</strong>: recuperación física y rehabilitación emocional para que cada animal encuentre su familia definitiva.</p>
+    </div>
+    <div class="columna-img">
+        <img src="../imagenes/PERRO11.jpg" alt="Propósito">
+    </div>
+  </section>
+
+<!--tercera seccion-->
+  <section class="fondo-gris">
+    <div class="contenedor grid-mision-vision">
+        <div class="tarjeta-grande">
+            <h3>Nuestra Misión</h3>
+            <p>Brindar asistencia, alimento y contención a perros y gatos rescatándolos de entornos peligrosos.</p>
+        </div>
+        <div class="tarjeta-grande">
+            <h3>Nuestra Visión</h3>
+            <p>Convertirnos en la organización referente en Argentina logrando un cambio cultural de respeto animal.</p>
+        </div>
+    </div>
+  </section>
+
+<!--cuarta seccion-->
+  <section class="contenedor">
+    <h2 class="titulo-seccion">Nuestros Valores</h2>
+    <div class="grid-valores">
+        <div class="valor-card">
+            <img src="../imagenes/valores1.png" alt="Dignidad">
+            <h4>Dignidad</h4>
+            <p>Tratamos a cada rescatado con el respeto y amor que merece.</p>
+        </div>
+        <div class="valor-card">
+            <img src="../imagenes/valores2.png" alt="Compromiso">
+            <h4>Compromiso</h4>
+            <p>No nos rendimos. Cada vida cuenta y luchamos por ella.</p>
+        </div>
+        <div class="valor-card">
+            <img src="../imagenes/valores3.png" alt="Transparencia">
+            <h4>Transparencia</h4>
+            <p>Honestidad total sobre el uso de los recursos recibidos.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer id="footer">
+  <p>Un Hogar Más - 2024</p>
+    <button class="boton_footer" onclick="abrirModal()">Donar</button>
+</footer>
+
+</body>
+<div id="modal-donar" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    
+    <h2>DONAR</h2>
+    <p class="explicacion">Tu ayuda permite que nuestros rescatados vivan mejor.</p>
+
+    <div class="contenedor-opciones">
+      <div class="opcion-donacion">
+        <div class="precio-circulo">10$</div>
+        <p>Una cama para un perro</p>
+        <div class="interaccion">
+          <span id="contador-camas" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('camas')">COMPRAR CAMA</button>
+        </div>
+      </div>
+
+      <div class="opcion-donacion">
+        <div class="precio-circulo">5$</div>
+        <p>Plato de comida premium</p>
+        <div class="interaccion">
+          <span id="contador-comida" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('comida')">COMPRAR COMIDA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescate Exitoso - Un Hogar Más</title>
+    <link rel="stylesheet" href="../css/cada_articulo.css">
+    <link rel="icon" type="image/x-icon" href="../imagenes/logo_sin_fondo.png">
+    <script src="../scrip/inicio.js" defer></script>
+       <link rel="stylesheet" href="../css/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--MENU DE ARRIBA-->
+  <header>
+    <div class="logo">
+        <img src="../imagenes/logo_sin_fondo.png" alt="Logo Un Hogar Más" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+      </ul>
+      <div class="kebab-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+<div class="botones-header"> 
+    <button class="boton_donar" onclick="abrirModal()">Donar</button>
+
+    <!--MODO DARCK-->
+    <button class="boton-modo" onclick="cambiarModo()">Cambiar Modo</button>
+  
+  </div>
+  </header>
+
+<!--PARA CELULAR--> 
+  <div class="overlay" id="overlay" onclick="toggleMenu()">
+    <ul class="mobile-nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+
+<div id="progress-bar"></div>
+
+    <main class="lectura-contenedor">
+<!--IMAGEN+TITULO-->       
+        <section class="encabezado-articulo">
+            <h1>Gran Jornada de Adopción Masiva: Tu mejor amigo te espera</h1>
+            <p class="subtitulo">Este sábado abrimos nuestras puertas para que conozcas al nuevo integrante de tu familia.</p>
+            <img src="../imagenes/aticulo2.jpg" alt="Perros rescatados" class="imagen-principal-blog">
+        </section>
+
+<!--SECCION TEXTO-->
+        <section class="cuerpo-texto">
+            <p>Llegó el momento que todos esperábamos. Después de meses de cuidado, rehabilitación y mucho amor en nuestros hogares de tránsito, más de 20 perros y gatos están listos para dar el paso final: encontrar un hogar definitivo.</p>
+            
+            <blockquote>
+                "No comprés uno de raza, adoptá uno sin casa. La lealtad de un animal rescatado no tiene límites." - Coordinación de Un Hogar Más.
+            </blockquote>
+            
+            <h2>¿Cuándo y dónde?</h2>
+            <p>La cita es este <strong>sábado de 11:00 a 18:00 hs</strong> en nuestro centro de encuentro en Palermo. Será una jornada llena de alegría donde no solo podrás conocer a los rescatados, sino también charlar con nuestros especialistas sobre conducta animal y tenencia responsable.</p>
+
+            <h2>¿Qué necesito para adoptar?</h2>
+            <p>Para nosotros, la seguridad de ellos es lo primero. Si encontrás a tu compañero ideal, realizaremos una breve entrevista y te pediremos completar un formulario. Recordá traer una foto de tu patio o balcón (debe estar protegido) y muchas ganas de dar amor.</p>
+            
+            <p>Si no podés adoptar en este momento, ¡no te preocupes! Podés venir igual a conocernos, traer donaciones de alimento balanceado o simplemente difundir el evento entre tus amigos y conocidos.</p>
+        </section>
+        
+    </main>
+
+    <footer id="footer">
+        <p>Un Hogar Más - 2024</p>
+         <button class="boton_footer" onclick="abrirModal()">Donar</button>
+    </footer>
+
+</body>
+<div id="modal-donar" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    
+    <h2>DONAR</h2>
+    <p class="explicacion">Tu ayuda permite que nuestros rescatados vivan mejor.</p>
+
+    <div class="contenedor-opciones">
+      <div class="opcion-donacion">
+        <div class="precio-circulo">10$</div>
+        <p>Una cama para un perro</p>
+        <div class="interaccion">
+          <span id="contador-camas" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('camas')">COMPRAR CAMA</button>
+        </div>
+      </div>
+
+      <div class="opcion-donacion">
+        <div class="precio-circulo">5$</div>
+        <p>Plato de comida premium</p>
+        <div class="interaccion">
+          <span id="contador-comida" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('comida')">COMPRAR COMIDA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

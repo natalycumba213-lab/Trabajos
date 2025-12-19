@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescate Exitoso - Un Hogar Más</title>
+    <link rel="stylesheet" href="../css/cada_articulo.css">
+    <link rel="icon" type="image/x-icon" href="../imagenes/logo_sin_fondo.png">
+    <script src="../scrip/inicio.js" defer></script>
+       <link rel="stylesheet" href="../css/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--MENU DE ARRIBA-->
+  <header>
+    <div class="logo">
+        <img src="../imagenes/logo_sin_fondo.png" alt="Logo Un Hogar Más" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+      </ul>
+      <div class="kebab-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+<div class="botones-header"> 
+    <button class="boton_donar" onclick="abrirModal()">Donar</button>
+
+    <!--MODO DARCK-->
+    <button class="boton-modo" onclick="cambiarModo()">Cambiar Modo</button>
+  
+  </div>
+  </header>
+
+<!--PARA CELULAR--> 
+  <div class="overlay" id="overlay" onclick="toggleMenu()">
+    <ul class="mobile-nav-links">
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="../html/sobre_ong.html">Sobre nosotros</a></li>
+        <li><a href="../html/articulos_principal.html">Proyectos</a></li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+
+<div id="progress-bar"></div>
+
+    <main class="lectura-contenedor">
+<!--IMAGEN+TITULO-->       
+        <section class="encabezado-articulo">
+            <h1>Campaña Gratuita de Vacunación: Protegé a tu familia</h1>
+            <p class="subtitulo">Lanzamos nuestra jornada anual de salud preventiva para perros y gatos de toda la comunidad.</p>
+            <img src="../imagenes/articulo3.jpg" alt="Perros rescatados" class="imagen-principal-blog">
+        </section>
+
+<!--SECCION TEXTO-->
+        <section class="cuerpo-texto">
+            <p>La prevención es el acto de amor más grande que podemos tener con nuestros rescatados y mascotas. Por eso, desde <strong>Un Hogar Más</strong>, organizamos una nueva jornada de vacunación gratuita para asegurar que ningún animal quede desprotegido frente a enfermedades evitables.</p>
+            
+            <blockquote>
+                "Vacunar no es solo un requisito legal, es la única barrera real entre nuestras mascotas y virus que pueden ser mortales." - Equipo Veterinario de la ONG.
+            </blockquote>
+
+            <h2>¿Qué vacunas estaremos aplicando?</h2>
+            <p>Durante la jornada estaremos aplicando la <strong>vacuna antirrábica</strong> (obligatoria por ley) y la <strong>quíntuple</strong> para perros, así como la <strong>triple felina</strong> para gatos. Contamos con un equipo de profesionales matriculados que garantizarán que el proceso sea rápido y sin estrés para tu mejor amigo.</p>
+
+            <h2>Requisitos para asistir</h2>
+            <p>Para que la jornada sea organizada y segura para todos, te pedimos tener en cuenta lo siguiente:</p>
+          
+            <h2>¿Qué necesito para adoptar?</h2>
+            <p>Para nosotros, la seguridad de ellos es lo primero. Si encontrás a tu compañero ideal, realizaremos una breve entrevista y te pediremos completar un formulario. Recordá traer una foto de tu patio o balcón (debe estar protegido) y muchas ganas de dar amor.</p>
+            
+            <p>Si no podés adoptar en este momento, ¡no te preocupes! Podés venir igual a conocernos, traer donaciones de alimento balanceado o simplemente difundir el evento entre tus amigos y conocidos.</p>
+        
+            <ul>
+                <li>Los perros deben venir con <strong>collar, correa y bozal</strong> (si son reactivos).</li>
+                <li>Los gatos deben ser transportados en <strong>bolsos o transportadoras cerradas</strong> para evitar huidas.</li>
+                <li>Traer la libreta sanitaria si el animal ya cuenta con una (si no tiene, te entregaremos un certificado nuevo).</li>
+                <li>Los animales deben ser mayores de 3 meses y estar en buen estado de salud general.</li>
+            </ul>
+            
+            <p>Acercate a nuestros puntos de salud móviles. No hace falta sacar turno previo, atenderemos por orden de llegada hasta agotar el stock de dosis disponibles.</p>
+        </section>
+        
+    </main>
+
+    <footer id="footer">
+        <p>Un Hogar Más - 2024</p>
+         <button class="boton_footer" onclick="abrirModal()">Donar</button>
+    </footer>
+
+</body>
+<div id="modal-donar" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    
+    <h2>DONAR</h2>
+    <p class="explicacion">Tu ayuda permite que nuestros rescatados vivan mejor.</p>
+
+    <div class="contenedor-opciones">
+      <div class="opcion-donacion">
+        <div class="precio-circulo">10$</div>
+        <p>Una cama para un perro</p>
+        <div class="interaccion">
+          <span id="contador-camas" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('camas')">COMPRAR CAMA</button>
+        </div>
+      </div>
+
+      <div class="opcion-donacion">
+        <div class="precio-circulo">5$</div>
+        <p>Plato de comida premium</p>
+        <div class="interaccion">
+          <span id="contador-comida" class="numero-donado">0</span>
+          <button class="btn-comprar" onclick="comprarItem('comida')">COMPRAR COMIDA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
